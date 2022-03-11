@@ -26,10 +26,13 @@ class OptionsMenu extends MusicBeatState
 	var options:Array<OptionCategory> = [
 		new OptionCategory("Gameplay", [
 			new DFJKOption(controls),
+                        #if android
+                        new CustomizeControls("Change The Android Controls."),
+                        #end
 			new DownscrollOption("Change the layout of the strumline."),
 			new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
 			new Judgement("Customize your Hit Timings (LEFT or RIGHT)"),
-			#if desktop
+			#if !mobile
 			new FPSCapOption("Cap your FPS"),
 			new ModchartOption("Turn the modchart on or off."),
 			#end
@@ -40,23 +43,21 @@ class OptionsMenu extends MusicBeatState
 			new CustomizeGameplay("Drag'n'Drop Gameplay Modules around to your preference")
 		]),
 		new OptionCategory("Appearance", [
-			#if desktop
 			new DistractionsAndEffectsOption("Toggle stage distractions that can hinder your gameplay."),
+                        #if !mobile
 			new RainbowFPSOption("Make the FPS Counter Rainbow"),
+                        #end
 			new AccuracyOption("Display accuracy information."),
 			new NPSDisplayOption("Shows your current Notes Per Second."),
 			new SongPositionOption("Show the songs current position (as a bar)"),
 			new CpuStrums("CPU's strumline lights up when a note hits it."),
-			#else
-			new DistractionsAndEffectsOption("Toggle stage distractions that can hinder your gameplay.")
-			#end
 		]),
 		
 		new OptionCategory("Misc", [
-			#if desktop
+			#if !mobile
 			new FPSOption("Toggle the FPS Counter"),
-			new ReplayOption("View replays"),
 			#end
+                        new ReplayOption("View replays"),
 			new FlashingLightsOption("Toggle flashing lights that can cause epileptic seizures and strain."),
 			new WatermarkOption("Enable and disable all watermarks from the engine."),
 			new BotPlay("Showcase your charts and mods with autoplay.")
@@ -111,6 +112,8 @@ class OptionsMenu extends MusicBeatState
 
 		FlxTween.tween(versionShit,{y: FlxG.height - 18},2,{ease: FlxEase.elasticInOut});
 		FlxTween.tween(blackBorder,{y: FlxG.height - 18},2, {ease: FlxEase.elasticInOut});
+                
+                addVirtualPad(FULL, A_B_X_Y);
 
 		super.create();
 	}
