@@ -71,5 +71,5 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: NEO V3.1 Android Build
+          name: Garnnie Android Build
           path: export/release/android/bin/app/build/outputs/apk/debug
