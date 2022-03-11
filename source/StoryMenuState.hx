@@ -173,6 +173,7 @@ class StoryMenuState extends MusicBeatState
 		// add(rankText);
 		add(scoreText);
 		add(txtWeekTitle);
+                addVirtualPad(FULL, A_B);
 
 		updateText();
 
