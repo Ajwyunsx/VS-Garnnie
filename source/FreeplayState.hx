@@ -88,6 +88,8 @@ class FreeplayState extends MusicBeatState
 			iconArray.push(icon);
 			add(icon);
 
+                        addVirtualPad(FULL, A_B);
+
 			// songText.x += 40;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 			// songText.screenCenter(X);
