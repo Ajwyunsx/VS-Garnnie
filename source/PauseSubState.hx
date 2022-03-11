@@ -91,7 +91,7 @@ class PauseSubState extends MusicBeatSubstate
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
                 addVirtualPad(FULL, A);
-                addPadCamera()
+                addPadCamera();
 	}
 
 	override function update(elapsed:Float)
