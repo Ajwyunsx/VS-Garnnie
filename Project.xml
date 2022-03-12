@@ -120,7 +120,8 @@
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
 	<haxelib name="discord_rpc" if="windows"/>
-	<haxelib name="linc_luajit" if="windows || android"/>
+	<haxelib name="linc_luajit" if="desktop || android"/>
+	<haxelib name="hxvm-luajit" if="desktop || android"/>
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
         <haxelib name="extension-webview" if="android"/>
         <haxelib name="AndroidTools" if="android"/>
