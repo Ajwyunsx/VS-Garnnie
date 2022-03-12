@@ -41,9 +41,9 @@
 
 	<classpath name="source" />
 
-	<assets path="assets/preload/images/androidcontrols/hitbox"/>
+	<assets path="assets/images/androidcontrols/hitbox"/>
 
-	<!--<assets path="assets/preload/images/androidcontrols/hitbox"/> just wait ok-->
+	<!--<assets path="assets/images/androidcontrols/hitbox"/> just wait ok-->
 
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3" unless="web"/>
