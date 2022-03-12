@@ -75,20 +75,6 @@ class Main extends Sprite
 			gameHeight = Math.ceil(stageHeight / zoom);
 		}
 
-		#if !debug
-		#if (html5 || android || ios || mobile)
-		initialState = State;
-		#end
-		initialState = TitleState;
-		#end
-		
-
-        #if android
-        gameWidth = 1280;
-        gameHeight = 720;
-        framerate = 60;
-        #end
-
 		SUtil.doTheCheck();
 
 		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
