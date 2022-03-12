@@ -41,7 +41,6 @@
 
 	<classpath name="source" />
 
-	<assets path="assets/android"/>
 	<assets path="assets/preload/images/androidcontrols/hitbox"/>
 
 	<!--<assets path="assets/preload/images/androidcontrols/hitbox"/> just wait ok-->
